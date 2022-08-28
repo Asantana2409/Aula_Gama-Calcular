@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Teste_23082022
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Qual o seu nome?");
+            Console.ReadLine();
+            Console.WriteLine("Vamos calcular?");
+            Console.ReadLine();
+            //Variaveis para  entrar com os numeros
+            int num1, num2;
+            //Solicitar os numeros
+            Console.WriteLine("Insira um número");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Insira outro número");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            //Mostrar menu de opcoes
+            Console.WriteLine(("Escolha uma opçao da lista"));
+            Console.WriteLine("a - Adiçao");
+            Console.WriteLine("s - Subtraçao");
+            Console.WriteLine("m - Multipliçao");
+            Console.WriteLine("d - Divisao");
+
+            //Realizar a ação de acordo com a opção escolhidas
+            switch (Console.ReadLine())
+            {
+                case "a":
+                    Console.WriteLine($"O resultado de {num1} + {num2} = " + (num1 + num2));
+                    break;
+
+                case "s":
+                    Console.WriteLine($"O resultado de {num1} - {num2} = " + (num1 - num2));
+                    break;
+                case "m":
+                    Console.WriteLine($"O resultado de {num1} * {num2} = " + (num1 * num2));
+                    break;
+                case "d":
+                    Console.WriteLine($"O resultado de {num1} / {num2} = " + (num1 / num2));
+                    break;
+            }
+            Console.Write("Pressione qualquer tecla para fechar o aplicativo");
+        }
+    }
+
+}
